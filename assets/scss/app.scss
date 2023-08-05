@@ -17,8 +17,41 @@
   display: none !important;
 }
 .nav-bar {
+  
   opacity: 1;
   visibility: visible;
+}
+.after-effect-tabs{
+  ul{
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.after-effect-tabs-content{
+  padding-bottom: 100px;
+}
+.menu-item{
+  color: rgba(0, 0, 0, 0.55);
+  padding: 0.7rem 0;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+
+  .line {
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s ease;
+    background-color: #0671e0;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 0;
+  }
+
+  &:hover .line {
+    width: 20px;
+  }
 }
 .fs-14 {
   font-size: 14px !important;
