@@ -16,36 +16,44 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./assets/css/app.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container d-flex align-items-center justify-content-between" style="display: flex; flex-wrap: wrap;">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+          style="display: flex; flex-wrap: wrap"
+        >
           <div class="navbar-brand">
             <img src="./assets/img/logo.png" alt="" />
           </div>
           <button
-          class="hamburger hamburger--vortex navbar-toggler p-2 my-2 animated animated-banner animated__bounceInRight collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMainMenu"
-          aria-controls="navbarMainMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="d-flex-row">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
+            class="hamburger hamburger--vortex navbar-toggler p-2 my-2 animated animated-banner animated__bounceInRight collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMainMenu"
+            aria-controls="navbarMainMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="d-flex-row">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
           <div
             id="navbarMainMenu"
             class="navbar-collapse animated animated-banner animated__bounceInDown collapse nav-bar"
           >
             <div class="container d-flex align-items-center">
-             
               <ul class="d-flex align-items-center gap-4 mx-auto mb-2 mb-lg-0">
                 <li class="menu-item dropdown-toggle nav-link">
                   After Effect
@@ -91,7 +99,7 @@
               </ul>
             </div>
           </div>
-         
+          
         </div>
 
         <div class="top-header">
@@ -723,6 +731,7 @@
           </div>
         </div>
       </main>
+
       <footer>
         <div class="container">
           <div class="row">
@@ -901,10 +910,35 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.querySelector('.hamburger').onclick = () => {
-        document.querySelector('.hamburger').classList.toggle('is-active')
-        document.querySelector('.navbar-collapse').classList.toggle('is-active')
-      }
+      document.querySelector(".hamburger").onclick = () => {
+        document.querySelector(".hamburger").classList.toggle("is-active");
+        document
+          .querySelector(".navbar-collapse")
+          .classList.toggle("is-active");
+      };
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "vertical",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
     </script>
   </body>
 </html>

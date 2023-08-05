@@ -19,7 +19,6 @@
 .nav-bar {
   opacity: 1;
   visibility: visible;
-  display: block !important;
 }
 .fs-14 {
   font-size: 14px !important;
@@ -141,7 +140,7 @@ a {
   .menu-item:hover .dropdown-menu {
     display: block;
   }
-  
+
   li {
     color: rgba(0, 0, 0, 0.55);
     padding: 0.7rem 0;
@@ -177,7 +176,6 @@ a {
     font-weight: 400;
     padding: 0.25rem 1rem;
     width: 100%;
-    
   }
   .dropdown-item:focus,
   .dropdown-item:hover {
@@ -276,8 +274,9 @@ a {
 
 @media screen and (max-width: 1023.98px) {
   .hamburger {
-    display: block;
+    display: block !important;
   }
+
   footer {
     .main-logo {
       margin: auto;
@@ -316,6 +315,21 @@ a {
       margin-top: 16px;
     }
   }
+  .dropdown-menu {
+    position: static;
+    display: none !important;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+  }
 }
 
 /* Styles cho iPad Mini với độ rộng màn hình 768px */
@@ -323,10 +337,13 @@ a {
   .nav-bar {
     visibility: hidden;
     opacity: 0;
+    display: none;
   }
   .nav-bar.is-active {
     visibility: unset;
+    display: block;
     opacity: 1;
+    flex: 100%;
   }
   .sidebar {
     display: none;
@@ -363,13 +380,21 @@ a {
   }
   .nav-bar {
     visibility: hidden;
+    display: none;
     opacity: 0;
   }
   .nav-bar.is-active {
     visibility: unset;
     opacity: 1;
+    flex: 100%;
+    display: block;
   }
   .sidebar {
     display: none;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .nav-bar {
+    display: block !important;
   }
 }
