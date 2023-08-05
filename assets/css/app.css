@@ -64,14 +64,10 @@
   background: #007aff;
 }
 
-main {
-  max-height: 100%;
-  margin-top: 70px;
-}
-main .card {
+.card {
   transition: 0.2s ease-in-out;
 }
-main .card:hover {
+.card:hover {
   cursor: pointer;
   transform: scale(1.04);
   -webkit-transform: scale(1.04);
@@ -79,7 +75,7 @@ main .card:hover {
   -ms-transform: scale(1.04);
   -o-transform: scale(1.04);
 }
-main .card-img img {
+.card-img img {
   display: block;
   width: 100%;
   height: 100%;
@@ -93,10 +89,10 @@ main .card-img img {
   max-height: 180px;
   border-radius: calc(0.25rem - 1px);
 }
-main .card-body svg {
+.card-body svg {
   width: 16px;
 }
-main .card-body h3 {
+.card-body h3 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
@@ -107,7 +103,7 @@ main .card-body h3 {
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
-main .card-body .link_ca {
+.card-body .link_ca {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -115,6 +111,11 @@ main .card-body .link_ca {
   width: 100%;
   overflow: hidden;
   text-align: left;
+}
+
+main {
+  max-height: 100%;
+  margin-top: 70px;
 }
 main .sidebar .card-title {
   margin-bottom: 1.5rem;
@@ -241,6 +242,19 @@ footer .sites-links-wrapper a {
 .after-effect-tabs ul {
   width: 100%;
   justify-content: space-between;
+}
+
+.main__banner {
+  background-image: url(../img/banner-1\ \(1\).png);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.after-effect-tabs {
+  padding-top: 100px;
+}
+.after-effect-tabs .nav-bar {
+  margin-bottom: 40px;
 }
 
 .after-effect-tabs-content {
